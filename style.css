@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+/* Azure B2C Container Fix */
+#api {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 /* Vollflächiger Hintergrund mit Blur */
 body, html {
   height: 100%;
@@ -50,7 +58,7 @@ body::before {
   font-weight: bold;
 }
 
-/* Social‑Login‑Buttons */
+/* Social-Login Buttons */
 .social-login {
   display: flex;
   flex-direction: column;
@@ -123,7 +131,7 @@ body::before {
   font-weight: bold;
 }
 
-/* Input‑Gruppen */
+/* Input-Gruppen */
 .input-group {
   margin-bottom: 16px;
 }
@@ -152,7 +160,7 @@ body::before {
   border-color: #1a73e8;
 }
 
-/* Submit‑Button */
+/* Submit-Button */
 .btn.submit {
   width: 100%;
   background: #1a73e8;
