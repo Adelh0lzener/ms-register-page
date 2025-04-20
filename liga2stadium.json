@@ -1,0 +1,236 @@
+[
+  {
+    "id": "eintracht_braunschweig",
+    "name": "Eintracht-Stadion (Eintracht Braunschweig)",
+    "stadionLocation": "Braunschweig, Niedersachsen",
+    "capacity": 23325,
+    "ticketPrice": 30.0,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Eintracht-Braunschweig_stadium.jpg",
+    "team": {
+      "id": "eintracht_braunschweig",
+      "name": "Eintracht Braunschweig",
+      "logoUrl": "https://logo.clearbit.com/eintracht.com?size=80"
+    }
+  },
+  {
+    "id": "fc_koeln",
+    "name": "RheinEnergieStadion (1. FC Köln)",
+    "stadionLocation": "Köln, Nordrhein‑Westfalen",
+    "capacity": 49698,
+    "ticketPrice": 32.0,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/55/RheinEnergieStadion_2019.jpg",
+    "team": {
+      "id": "fc_koeln",
+      "name": "1. FC Köln",
+      "logoUrl": "https://logo.clearbit.com/fc-koeln.de?size=80"
+    }
+  },
+  {
+    "id": "sv_darmstadt_98",
+    "name": "Merck-Stadion am Böllenfalltor (SV Darmstadt 98)",
+    "stadionLocation": "Darmstadt, Hessen",
+    "capacity": 17810,
+    "ticketPrice": 28.0,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/74/Merck-Stadion_am_B%C3%B6llenfalltor.jpg",
+    "team": {
+      "id": "sv_darmstadt_98",
+      "name": "SV Darmstadt 98",
+      "logoUrl": "https://logo.clearbit.com/sv98.de?size=80"
+    }
+  },
+  {
+    "id": "sv_elversberg",
+    "name": "URSAPHARM-Arena (SV Elversberg)",
+    "stadionLocation": "Spiesen‑Elversberg, Saarland",
+    "capacity": 10000,
+    "ticketPrice": 25.0,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b5/URSApharm-Arena.jpg",
+    "team": {
+      "id": "sv_elversberg",
+      "name": "SV Elversberg",
+      "logoUrl": "https://logo.clearbit.com/sv07elversberg.de?size=80"
+    }
+  },
+  {
+    "id": "fortuna_duesseldorf",
+    "name": "Merkur Spiel‑Arena (Fortuna Düsseldorf)",
+    "stadionLocation": "Düsseldorf, Nordrhein‑Westfalen",
+    "capacity": 54600,
+    "ticketPrice": 35.0,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Merkur_Spiel-Arena_aerial.jpg",
+    "team": {
+      "id": "fortuna_duesseldorf",
+      "name": "Fortuna Düsseldorf",
+      "logoUrl": "https://logo.clearbit.com/fortuna-duesseldorf.de?size=80"
+    }
+  },
+  {
+    "id": "spvgg_greuther_fuerth",
+    "name": "Sportpark Ronhof Thomas Sommer (SpVgg Greuther Fürth)",
+    "stadionLocation": "Fürth, Bayern",
+    "capacity": 16626,
+    "ticketPrice": 27.0,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Sportpark_Ronhof_Greuther_F%C3%BCrth.jpg",
+    "team": {
+      "id": "spvgg_greuther_fuerth",
+      "name": "SpVgg Greuther Fürth",
+      "logoUrl": "https://logo.clearbit.com/greuther-fuerth.de?size=80"
+    }
+  },
+  {
+    "id": "hamburger_sv",
+    "name": "Volksparkstadion (Hamburger SV)",
+    "stadionLocation": "Hamburg, Hamburg",
+    "capacity": 57000,
+    "ticketPrice": 31.0,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Volksparkstadion_Hamburg.jpg",
+    "team": {
+      "id": "hamburger_sv",
+      "name": "Hamburger SV",
+      "logoUrl": "https://logo.clearbit.com/hsv.de?size=80"
+    }
+  },
+  {
+    "id": "hannover_96",
+    "name": "Heinz‑von‑Heiden‑Arena (Hannover 96)",
+    "stadionLocation": "Hannover, Niedersachsen",
+    "capacity": 49000,
+    "ticketPrice": 29.0,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Heinz-von-Heiden-Arena.jpg",
+    "team": {
+      "id": "hannover_96",
+      "name": "Hannover 96",
+      "logoUrl": "https://logo.clearbit.com/hannover96.de?size=80"
+    }
+  },
+  {
+    "id": "hertha_berlin",
+    "name": "Olympiastadion (Hertha BSC)",
+    "stadionLocation": "Berlin, Berlin",
+    "capacity": 74649,
+    "ticketPrice": 33.0,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Olympiastadion_Berlin.jpg",
+    "team": {
+      "id": "hertha_berlin",
+      "name": "Hertha BSC",
+      "logoUrl": "https://logo.clearbit.com/herthabsc.com?size=80"
+    }
+  },
+  {
+    "id": "ssv_jahn_regensburg",
+    "name": "Jahn‑Stadion Regensburg (SSV Jahn Regensburg)",
+    "stadionLocation": "Regensburg, Bayern",
+    "capacity": 15224,
+    "ticketPrice": 26.0,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/Jahn-Stadion_Regensburg.jpg",
+    "team": {
+      "id": "ssv_jahn_regensburg",
+      "name": "SSV Jahn Regensburg",
+      "logoUrl": "https://logo.clearbit.com/ssv-jahn.de?size=80"
+    }
+  },
+  {
+    "id": "fc_kaiserslautern",
+    "name": "Fritz‑Walter‑Stadion (1. FC Kaiserslautern)",
+    "stadionLocation": "Kaiserslautern, Rheinland‑Pfalz",
+    "capacity": 49780,
+    "ticketPrice": 30.0,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Fritz-Walter-Stadion.jpg",
+    "team": {
+      "id": "fc_kaiserslautern",
+      "name": "1. FC Kaiserslautern",
+      "logoUrl": "https://logo.clearbit.com/fck.de?size=80"
+    }
+  },
+  {
+    "id": "karlsruher_sc",
+    "name": "Wildparkstadion (Karlsruher SC)",
+    "stadionLocation": "Karlsruhe, Baden‑Württemberg",
+    "capacity": 29699,
+    "ticketPrice": 27.0,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Wildparkstadion.jpg",
+    "team": {
+      "id": "karlsruher_sc",
+      "name": "Karlsruher SC",
+      "logoUrl": "https://logo.clearbit.com/ksc.de?size=80"
+    }
+  },
+  {
+    "id": "fc_magdeburg",
+    "name": "MDCC‑Arena (1. FC Magdeburg)",
+    "stadionLocation": "Magdeburg, Sachsen‑Anhalt",
+    "capacity": 30098,
+    "ticketPrice": 28.0,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/MDCC-Arena.JPG",
+    "team": {
+      "id": "fc_magdeburg",
+      "name": "1. FC Magdeburg",
+      "logoUrl": "https://logo.clearbit.com/1.fc-magdeburg.de?size=80"
+    }
+  },
+  {
+    "id": "1_fc_nurnberg",
+    "name": "Max‑Morlock‑Stadion (1. FC Nürnberg)",
+    "stadionLocation": "Nürnberg, Bayern",
+    "capacity": 49923,
+    "ticketPrice": 29.0,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/Max-Morlock-Stadion.jpg",
+    "team": {
+      "id": "1_fc_nurnberg",
+      "name": "1. FC Nürnberg",
+      "logoUrl": "https://logo.clearbit.com/fcn.de?size=80"
+    }
+  },
+  {
+    "id": "sc_paderborn_07",
+    "name": "Home Deluxe Arena (SC Paderborn 07)",
+    "stadionLocation": "Paderborn, Nordrhein‑Westfalen",
+    "capacity": 15000,
+    "ticketPrice": 25.0,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Home_Deluxe_Arena.jpg",
+    "team": {
+      "id": "sc_paderborn_07",
+      "name": "SC Paderborn 07",
+      "logoUrl": "https://logo.clearbit.com/scp07.de?size=80"
+    }
+  },
+  {
+    "id": "preussen_munster",
+    "name": "Preußenstadion (Preußen Münster)",
+    "stadionLocation": "Münster, Nordrhein‑Westfalen",
+    "capacity": 15050,
+    "ticketPrice": 25.0,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Preußenstadion.png",
+    "team": {
+      "id": "preussen_munster",
+      "name": "Preußen Münster",
+      "logoUrl": "https://logo.clearbit.com/preussen-muenster.de?size=80"
+    }
+  },
+  {
+    "id": "fc_schalke_04",
+    "name": "Veltins‑Arena (FC Schalke 04)",
+    "stadionLocation": "Gelsenkirchen, Nordrhein‑Westfalen",
+    "capacity": 62271,
+    "ticketPrice": 32.0,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Veltins-Arena_aerial.jpg",
+    "team": {
+      "id": "fc_schalke_04",
+      "name": "FC Schalke 04",
+      "logoUrl": "https://logo.clearbit.com/schalke04.de?size=80"
+    }
+  },
+  {
+    "id": "ssv_ulm_1846",
+    "name": "Donaustadion (SSV Ulm 1846)",
+    "stadionLocation": "Ulm, Baden‑Württemberg",
+    "capacity": 19500,
+    "ticketPrice": 24.0,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Donaustadion_Ulm.jpg",
+    "team": {
+      "id": "ssv_ulm_1846",
+      "name": "SSV Ulm 1846",
+      "logoUrl": "https://logo.clearbit.com/ssvulm1846.de?size=80"
+    }
+  }
+]
