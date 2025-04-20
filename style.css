@@ -3,21 +3,36 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-  background-color: #f0f2f5;
   height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: url('stadion.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+/* Dunkler Overlay für bessere Lesbarkeit */
+body::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 0;
 }
 
 /* Formular-Karte */
 .form-container {
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 420px;
   padding: 32px;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
 /* Überschrift */
@@ -31,7 +46,7 @@ form h2 {
 /* Gruppen */
 .input-group {
   margin-bottom: 20px;
-  width: 100%; /* Sicherstellen, dass die Gruppe die ganze Breite nutzt */
+  width: 100%;
 }
 
 .input-group label {
@@ -42,12 +57,11 @@ form h2 {
   color: #333;
 }
 
-/* Eingabefelder */
 .input-group input,
 .input-group select {
-  display: block; /* neu: für konsistente Block-Darstellung */
-  width: 100%;     /* wichtig: einheitliche Breite */
-  box-sizing: border-box; /* verhindert Padding-Probleme */
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
   padding: 12px;
   font-size: 14px;
   border: 1px solid #ccc;
