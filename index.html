@@ -52,7 +52,7 @@
           const data = await res.json();
           data.forEach(item => allTeams.add(item.team.name));
         } catch (e) {
-          console.error(Fehler beim Laden von ${url}, e);
+          console.error(`Fehler beim Laden von ${url}`, e);
         }
       }
 
