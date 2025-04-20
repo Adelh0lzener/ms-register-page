@@ -1,95 +1,88 @@
-/* Basis-Styling */
+/* Bild als Hintergrund */
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
   height: 100%;
-  width: 100%;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background: url('stadion.jpg') no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('stadion.jpg') no-repeat center center fixed;
-  background-size: cover;
-  position: relative;
 }
 
-/* Dunkler Overlay für bessere Lesbarkeit */
-body::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
-  z-index: 0;
-}
-
-/* Formular-Karte */
+/* Form-Kachel */
 .form-container {
-  position: relative;
-  z-index: 1;
+  background-color: rgba(20, 20, 20, 0.85);
+  padding: 32px;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   width: 100%;
   max-width: 420px;
-  padding: 32px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  color: #f5f5f5;
 }
 
-/* Überschrift */
+/* Titel */
 form h2 {
   margin-bottom: 24px;
   text-align: center;
-  font-size: 24px;
-  color: #222;
+  font-size: 28px;
+  font-weight: bold;
+  color: #f5f5f5;
 }
 
-/* Gruppen */
+/* Input-Gruppen */
 .input-group {
   margin-bottom: 20px;
-  width: 100%;
 }
 
 .input-group label {
   display: block;
   margin-bottom: 8px;
-  font-weight: 600;
-  font-size: 14px;
-  color: #333;
+  font-weight: bold;
+  font-size: 15px;
+  color: #f5f5f5;
 }
 
 .input-group input,
 .input-group select {
-  display: block;
   width: 100%;
-  box-sizing: border-box;
-  padding: 12px;
+  padding: 14px;
   font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  transition: border-color 0.3s ease;
+  border: 1px solid #444;
+  border-radius: 12px;
+  background-color: #1f1f1f;
+  color: #f5f5f5;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input::placeholder {
+  color: #888;
 }
 
 .input-group input:focus,
 .input-group select:focus {
   outline: none;
-  border-color: #0078d4;
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
 }
 
-/* Button */
+/* Submit-Button */
 button[type="submit"] {
   width: 100%;
-  padding: 14px;
-  font-size: 15px;
+  padding: 16px;
+  font-size: 16px;
   font-weight: bold;
   border: none;
-  border-radius: 12px;
-  background-color: #0078d4;
-  color: #fff;
+  border-radius: 14px;
+  background-color: #1a73e8;
+  color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
-  background-color: #005fa3;
+  background-color: #0f5ec2;
 }
