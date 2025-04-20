@@ -1,155 +1,165 @@
-/* Reset & Box‑Sizing */
+/* Reset & Box-Sizing */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* Body & Hintergrund */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+/* Vollflächiger Hintergrund mit Blur */
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('stadion.jpg') no-repeat center center fixed;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  color: #333;
 }
 
-/* Form‑Container */
-.form-container {
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 12px;
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+/* Zentrierter Container */
+.container {
   width: 100%;
-  max-width: 400px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 420px;
+  padding: 16px;
 }
 
-.form-container h2 {
+/* Karte mit Schatten */
+.card {
+  background: rgba(20, 20, 20, 0.85);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  color: #f5f5f5;
+}
+
+/* Überschrift */
+.card h2 {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
   font-size: 1.75rem;
-  color: #333333;
+  font-weight: bold;
 }
 
-/* Social‑Buttons */
-.social-buttons {
+/* Social‑Login‑Buttons */
+.social-login {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 12px;
+  margin-bottom: 24px;
 }
 
-.social-button {
+.btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 0.95rem;
+  gap: 8px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: filter 0.2s;
 }
 
-.social-button img {
+.btn img {
   width: 20px;
   height: 20px;
 }
 
-/* Google */
-.social-button.google {
-  background-color: #ffffff;
-  border-color: #dddddd;
+/* Google-Button */
+.btn.google {
+  background: #ffffff;
+  color: #444;
 }
 
-.social-button.google:hover {
-  background-color: #f7f7f7;
+.btn.google:hover {
+  filter: brightness(0.95);
 }
 
-/* Microsoft */
-.social-button.microsoft {
-  background-color: #2F2F56;
-  color: #ffffff;
-  border-color: #2F2F56;
+/* Microsoft-Button */
+.btn.microsoft {
+  background: #2F2F56;
+  color: #fff;
 }
 
-.social-button.microsoft:hover {
-  background-color: #1e1e3f;
+.btn.microsoft:hover {
+  filter: brightness(0.9);
 }
 
-/* Trenner “oder” */
+/* Trenner “ODER” */
 .separator {
-  text-align: center;
-  margin: 1.5rem 0;
   position: relative;
+  text-align: center;
+  margin: 16px 0;
 }
 
 .separator::before,
 .separator::after {
   content: '';
-  height: 1px;
-  width: 40%;
-  background: #cccccc;
   position: absolute;
   top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #555;
 }
 
-.separator::before {
-  left: 0;
-}
-
-.separator::after {
-  right: 0;
-}
+.separator::before { left: 0; }
+.separator::after { right: 0; }
 
 .separator span {
-  background: #ffffff;
-  padding: 0 0.75rem;
-  color: #666666;
-  font-size: 0.9rem;
+  background: rgba(20,20,20,0.85);
+  padding: 0 8px;
+  color: #ddd;
+  font-weight: bold;
 }
 
 /* Input‑Gruppen */
 .input-group {
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
 .input-group label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 6px;
   font-size: 0.9rem;
-  color: #444444;
+  font-weight: bold;
+  color: #ddd;
 }
 
 .input-group input {
   width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #cccccc;
+  padding: 12px;
+  border: 1px solid #333;
   border-radius: 8px;
+  background: #1f1f1f;
+  color: #f5f5f5;
   font-size: 0.95rem;
   transition: border-color 0.3s;
 }
 
 .input-group input:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #1a73e8;
 }
 
 /* Submit‑Button */
-.submit-button {
+.btn.submit {
   width: 100%;
-  padding: 0.75rem;
-  background-color: #667eea;
-  color: #ffffff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  background: #1a73e8;
+  color: #fff;
+  margin-top: 8px;
 }
 
-.submit-button:hover {
-  background-color: #5a67d8;
+.btn.submit:hover {
+  background: #0f5ec2;
 }
