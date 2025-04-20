@@ -31,6 +31,7 @@ form h2 {
 /* Gruppen */
 .input-group {
   margin-bottom: 20px;
+  width: 100%; /* Sicherstellen, dass die Gruppe die ganze Breite nutzt */
 }
 
 .input-group label {
@@ -41,9 +42,12 @@ form h2 {
   color: #333;
 }
 
+/* Eingabefelder */
 .input-group input,
 .input-group select {
-  width: 100%;
+  display: block; /* neu: für konsistente Block-Darstellung */
+  width: 100%;     /* wichtig: einheitliche Breite */
+  box-sizing: border-box; /* verhindert Padding-Probleme */
   padding: 12px;
   font-size: 14px;
   border: 1px solid #ccc;
