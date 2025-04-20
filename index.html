@@ -1,49 +1,15 @@
 <body>
-  <div id="api">
-    <div class="form-container">
-      <form id="registerForm">
-        <h2>Registrieren</h2>
+  <!-- Azure AD B2C UI‑Container -->
+  <div id="api"></div>
 
-        <div class="input-group">
-          <label for="email">E-Mail*</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-
-        <div class="input-group">
-          <label for="phone">Telefonnummer (optional)</label>
-          <input type="tel" id="phone" name="phone" />
-        </div>
-
-        <div class="input-group">
-          <label for="password">Passwort*</label>
-          <input type="password" id="password" name="password" required />
-        </div>
-
-        <div class="input-group">
-          <label for="repeat-password">Passwort wiederholen*</label>
-          <input type="password" id="repeat-password" name="repeat-password" required />
-        </div>
-
-        <div class="input-group">
-          <label for="team">Lieblingsverein*</label>
-          <select id="team" name="team" required>
-            <option value="">Bitte auswählen...</option>
-          </select>
-        </div>
-
-        <div class="input-group">
-          <label for="birthdate">Geburtsdatum*</label>
-          <input type="date" id="birthdate" name="birthdate" required />
-        </div>
-
-        <button type="submit">Registrieren</button>
-      </form>
-    </div>
-  </div>
-
+  <!-- Dein Script zum Nachladen der Vereinsliste -->
   <script>
     async function loadTeams() {
-      const urls = ['data/liga1stadium.json', 'data/liga2stadium.json', 'data/liga3stadium.json'];
+      const urls = [
+        'data/liga1stadium.json',
+        'data/liga2stadium.json',
+        'data/liga3stadium.json'
+      ];
       const allTeams = new Set();
 
       for (const url of urls) {
@@ -52,19 +18,29 @@
           const data = await res.json();
           data.forEach(item => allTeams.add(item.team.name));
         } catch (e) {
-          console.error(`Fehler beim Laden von ${url}`, e);
+          console.error(`Fehler beim Laden von ${url}:`, e);
         }
       }
 
-      const select = document.getElementById('team');
-      [...allTeams].sort().forEach(name => {
-        const option = document.createElement('option');
-        option.value = name;
-        option.textContent = name;
-        select.appendChild(option);
-      });
+      // Warte darauf, dass B2C das <select id="team"> einfügt
+      const interval = setInterval(() => {
+        const select = document.getElementById('team');
+        if (!select) return;
+        clearInterval(interval);
+
+        // Vereinsnamen alphabetisch sortiert einfügen
+        [...allTeams].sort().forEach(name => {
+          const option = document.createElement('option');
+          option.value = name;
+          option.textContent = name;
+          select.appendChild(option);
+        });
+      }, 500);
     }
 
-    loadTeams();
+    document.addEventListener('DOMContentLoaded', loadTeams);
   </script>
+
+  <!-- Azure AD B2C „combined.js“: injiziert das Registrierungs‑Formular in <div id="api"> -->
+  <script src="https://1860131218601312.b2clogin.com/1860131218601312.onmicrosoft.com/B2C_1_signup_or_signin/api/combined.js"></script>
 </body>
