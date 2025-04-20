@@ -1,54 +1,61 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Registrierung via Azure B2C</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registrierung via Azure AD B2C</title>
+
+  <!-- Absolute Pfade zu Deinen Assets -->
+  <link
+    rel="stylesheet"
+    href="https://adelh0lzener.github.io/ms-register-page/style.css"
+  />
 </head>
 <body>
-  <!-- Azure AD B2C ersetzt diesen Container mit dem echten Formular -->
+  <!-- Azure AD B2C füllt diesen Container mit dem echten Formular -->
   <div id="api"></div>
 
-  <!-- Dein Script zum Nachladen der Vereinsliste -->
   <script>
-    async function loadTeams() {
-      const urls = [
-        'data/liga1stadium.json',
-        'data/liga2stadium.json',
-        'data/liga3stadium.json'
-      ];
-      const allTeams = new Set();
+    const BASE = "https://adelh0lzener.github.io/ms-register-page/";
 
-      for (const url of urls) {
+    async function loadTeams() {
+      const sources = [
+        BASE + "data/liga1stadium.json",
+        BASE + "data/liga2stadium.json",
+        BASE + "data/liga3stadium.json"
+      ];
+      const teams = new Set();
+
+      for (const url of sources) {
         try {
-          const res = await fetch(url);
-          const data = await res.json();
-          data.forEach(item => allTeams.add(item.team.name));
+          const resp = await fetch(url);
+          const data = await resp.json();
+          data.forEach(item => teams.add(item.team.name));
         } catch (e) {
-          console.error(`Fehler beim Laden von ${url}:`, e);
+          console.error("Fehler beim Laden von " + url, e);
         }
       }
 
       const interval = setInterval(() => {
-        const select = document.getElementById('team');
-        if (!select) return;
+        const sel = document.getElementById("team");
+        if (!sel) return;
         clearInterval(interval);
-        [...allTeams].sort().forEach(name => {
-          const opt = document.createElement('option');
+
+        [...teams].sort().forEach(name => {
+          const opt = document.createElement("option");
           opt.value = name;
           opt.textContent = name;
-          select.appendChild(opt);
+          sel.appendChild(opt);
         });
       }, 500);
     }
 
-    document.addEventListener('DOMContentLoaded', loadTeams);
+    document.addEventListener("DOMContentLoaded", loadTeams);
   </script>
 
-  <!-- Azure AD B2C combined.js: baut das UI in #api ein -->
+  <!-- Azure AD B2C UI‑Script -->
   <script
-    src="https://1860131218601312.b2clogin.com/1860131218601312.onmicrosoft.com/B2C_1_signup_or_signin/api/combined.js">
-  </script>
+    src="https://1860131218601312.b2clogin.com/1860131218601312.onmicrosoft.com/B2C_1_signup_or_signin/api/combined.js"
+  ></script>
 </body>
 </html>
