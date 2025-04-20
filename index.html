@@ -4,46 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Registrierung</title>
+  <!-- Dein CSS auf GitHub Pages -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="form-container">
-    <h2>Registrieren</h2>
+  <!-- 1) Leer-Container für Azure AD B2C UI -->
+  <div id="api"></div>
 
-    <!-- Social‑Login -->
-    <div class="social-buttons">
-      <button class="social-button google">
-        <img src="https://www.svgrepo.com/show/355037/google.svg" alt="Google Logo">
-        Mit Google registrieren
-      </button>
-      <button class="social-button microsoft">
-        <img src="https://www.svgrepo.com/show/354202/microsoft.svg" alt="Microsoft Logo">
-        Mit Microsoft registrieren
-      </button>
-    </div>
+  <!-- 2) Dein Script zum Nachladen der Vereinsliste -->
+  <script>
+    async function loadTeams() {
+      const urls = [
+        'data/liga1stadium.json',
+        'data/liga2stadium.json',
+        'data/liga3stadium.json'
+      ];
+      const allTeams = new Set();
 
-    <!-- Trenner -->
-    <div class="separator"><span>oder</span></div>
+      for (const url of urls) {
+        try {
+          const res = await fetch(url);
+          const data = await res.json();
+          data.forEach(item => allTeams.add(item.team.name));
+        } catch (e) {
+          console.error(`Fehler beim Laden von ${url}:`, e);
+        }
+      }
 
-    <!-- Klassisches Formular -->
-    <form id="registerForm">
-      <div class="input-group">
-        <label for="email">E‑Mail</label>
-        <input type="email" id="email" name="email" required>
-      </div>
+      // Wiederholt prüfen, bis B2C das <select id="team"> erzeugt hat
+      const interval = setInterval(() => {
+        const select = document.getElementById('team');
+        if (!select) return;
+        clearInterval(interval);
 
-      <div class="input-group">
-        <label for="password">Passwort</label>
-        <input type="password" id="password" name="password" required>
-      </div>
+        [...allTeams].sort().forEach(name => {
+          const option = document.createElement('option');
+          option.value = name;
+          option.textContent = name;
+          select.appendChild(option);
+        });
+      }, 500);
+    }
 
-      <div class="input-group">
-        <label for="repeat-password">Passwort wiederholen</label>
-        <input type="password" id="repeat-password" name="repeat-password" required>
-      </div>
+    document.addEventListener('DOMContentLoaded', loadTeams);
+  </script>
 
-      <button type="submit" class="submit-button">Registrieren</button>
-    </form>
-  </div>
+  <!-- 3) Azure AD B2C combined.js: ersetzt den <div id="api"> durch das Login-/Signup‑Form -->
+  <script src="https://1860131218601312.b2clogin.com/1860131218601312.onmicrosoft.com/B2C_1_signup_or_signin/api/combined.js"></script>
 </body>
 </html>
