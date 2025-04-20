@@ -1,4 +1,10 @@
-/* Bild als Hintergrund */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background: url('https://adelh0lzener.github.io/ms-register-page/stadion.jpg') center center / cover no-repeat fixed;
+  backdrop-filter: blur(4px);
+}
 body, html {
   margin: 0;
   padding: 0;
