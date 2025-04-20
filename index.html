@@ -3,46 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Registrierung (Vorschau)</title>
+  <title>Registrieren</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="form-container">
-    <h2>Registrieren</h2>
+  <div class="container">
+    <div class="card">
+      <h2>Registrieren</h2>
 
-    <!-- Social‑Login -->
-    <div class="social-buttons">
-      <button class="social-button google">
-        <img src="https://www.svgrepo.com/show/355037/google.svg" alt="Google Logo">
-        Mit Google registrieren
-      </button>
-      <button class="social-button microsoft">
-        <img src="https://www.svgrepo.com/show/354202/microsoft.svg" alt="Microsoft Logo">
-        Mit Microsoft registrieren
-      </button>
+      <!-- Social‑Login -->
+      <div class="social-login">
+        <button class="btn google">
+          <img src="assets/google.svg" alt="Google-Logo">
+          Mit Google registrieren
+        </button>
+        <button class="btn microsoft">
+          <img src="assets/microsoft.svg" alt="Microsoft-Logo">
+          Mit Microsoft registrieren
+        </button>
+      </div>
+
+      <div class="separator"><span>ODER</span></div>
+
+      <!-- Klassisches Formular -->
+      <form id="registerForm">
+        <div class="input-group">
+          <label for="email">E‑Mail*</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="input-group">
+          <label for="password">Passwort*</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+
+        <div class="input-group">
+          <label for="repeat-password">Passwort wiederholen*</label>
+          <input type="password" id="repeat-password" name="repeat-password" required>
+        </div>
+
+        <button type="submit" class="btn submit">Registrieren</button>
+      </form>
     </div>
-
-    <div class="separator"><span>oder</span></div>
-
-    <!-- Klassisches Formular -->
-    <form id="registerForm">
-      <div class="input-group">
-        <label for="email">E‑Mail*</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-
-      <div class="input-group">
-        <label for="password">Passwort*</label>
-        <input type="password" id="password" name="password" required>
-      </div>
-
-      <div class="input-group">
-        <label for="repeat-password">Passwort wiederholen*</label>
-        <input type="password" id="repeat-password" name="repeat-password" required>
-      </div>
-
-      <button type="submit" class="submit-button">Registrieren</button>
-    </form>
   </div>
 </body>
 </html>
