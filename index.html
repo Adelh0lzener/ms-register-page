@@ -1,25 +1,18 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registrieren</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
   <div id="api">
     <div class="container">
       <div class="card">
-<h2>Registrieren</h2>
+        <h2>Registrieren</h2>
 
-        <!-- Social-Login Buttons -->
-        <div class="social-login" id="socialLoginButtons">
-          <button class="btn google">
-            <img src="google.jpg" alt="Google-Logo" />
-            Mit Google registrieren
-          </button>
-          <button class="btn microsoft">
-            <img src="microsoft.jpg" alt="Microsoft-Logo" />
-            Mit Microsoft registrieren
-          </button>
-        </div>
-
-        <div class="separator"><span>ODER</span></div>
-
-        <!-- Formular mit Azure-kompatiblen IDs -->
-        <form id="attributeVerification" class="form">
+        <form id="registerForm">
           <div class="input-group">
             <label for="email">E‑Mail*</label>
             <input type="email" id="email" name="email" required />
@@ -31,13 +24,32 @@
           </div>
 
           <div class="input-group">
-            <label for="reenterPassword">Passwort wiederholen*</label>
-            <input type="password" id="reenterPassword" name="reenterPassword" required />
+            <label for="repeat-password">Passwort wiederholen*</label>
+            <input type="password" id="repeat-password" name="repeat-password" required />
           </div>
 
-          <button id="continue" type="submit" class="btn submit">Registrieren</button>
+          <div class="input-group">
+            <label for="team">Lieblingsverein*</label>
+            <select id="team" name="team" required>
+              <option value="">Bitte auswählen...</option>
+              <option value="FC Bayern München">FC Bayern München</option>
+              <option value="Borussia Dortmund">Borussia Dortmund</option>
+              <option value="Hamburger SV">Hamburger SV</option>
+              <option value="1860 München">1860 München</option>
+              <option value="St. Pauli">St. Pauli</option>
+              <!-- weitere Teams hier -->
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="birthdate">Geburtsdatum*</label>
+            <input type="date" id="birthdate" name="birthdate" required />
+          </div>
+
+          <button type="submit" class="btn submit">Registrieren</button>
         </form>
       </div>
     </div>
   </div>
 </body>
+</html>
