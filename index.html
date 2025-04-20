@@ -43,7 +43,11 @@
 
   <script>
     async function loadTeams() {
-      const urls = ['data/liga1stadium.json', 'data/liga2stadium.json', 'data/liga3stadium.json'];
+      const urls = [
+        'data/liga1stadium.json',
+        'data/liga2stadium.json',
+        'data/liga3stadium.json'
+      ];
       const allTeams = new Set();
 
       for (const url of urls) {
