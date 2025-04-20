@@ -1,53 +1,41 @@
-/* Hintergrundbild mit Blur */
+/* Basis-Styling */
 body, html {
   margin: 0;
   padding: 0;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background-color: #f0f2f5;
   height: 100%;
-  font-family: 'Helvetica Neue', sans-serif;
-  background: url('stadion.jpg') no-repeat center center fixed;
-  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  backdrop-filter: blur(6px);
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 0;
-}
-
-/* Formular Container */
+/* Formular-Karte */
 .form-container {
-  position: relative;
-  z-index: 1;
-  max-width: 400px;
-  margin: 5% auto;
-  padding: 24px;
-  background-color: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+  background-color: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-/* Formularüberschrift */
+/* Überschrift */
 form h2 {
+  margin-bottom: 24px;
   text-align: center;
   font-size: 24px;
-  margin-bottom: 20px;
   color: #222;
 }
 
-/* Formularfelder */
+/* Gruppen */
 .input-group {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .input-group label {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   font-weight: 600;
   font-size: 14px;
   color: #333;
@@ -57,33 +45,33 @@ form h2 {
 .input-group select {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 12px;
   font-size: 14px;
-  background-color: #fdfdfd;
-  transition: border-color 0.3s;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
 }
 
 .input-group input:focus,
 .input-group select:focus {
-  border-color: #0078d4;
   outline: none;
+  border-color: #0078d4;
 }
 
 /* Button */
 button[type="submit"] {
   width: 100%;
   padding: 14px;
+  font-size: 15px;
+  font-weight: bold;
   border: none;
   border-radius: 12px;
-  font-size: 16px;
   background-color: #0078d4;
-  color: white;
-  font-weight: bold;
+  color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
-  background-color: #005a9e;
+  background-color: #005fa3;
 }
