@@ -1,233 +1,155 @@
-/* ============================================= */
-/* DEINE EXISTIERENDEN DEFINITIONEN            */
-/* ============================================= */
-
-/* Hintergrundbild mit Blur */
-body, html {
+/* Reset & Box‑Sizing */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  height: 100%;
-  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-  background: url('https://adelh0lzener.github.io/ms-register-page/stadion.jpg') no-repeat center center fixed;
-  background-size: cover;
+}
+
+/* Body & Hintergrund */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  color: #333;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  background-color: rgba(0, 0, 0, 0.4); /* dunkler Schleier */
-  z-index: -1;
-}
-
-/* Form-Kachel */
+/* Form‑Container */
 .form-container {
-  background-color: rgba(20, 20, 20, 0.85);
-  padding: 32px;
-  border-radius: 24px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
   width: 100%;
-  max-width: 420px;
-  color: #f5f5f5;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Titel */
-form h2 {
-  margin-bottom: 24px;
+.form-container h2 {
   text-align: center;
-  font-size: 28px;
-  font-weight: bold;
-  color: #f5f5f5;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  color: #333333;
 }
 
-/* Input-Gruppen */
+/* Social‑Buttons */
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.social-button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Google */
+.social-button.google {
+  background-color: #ffffff;
+  border-color: #dddddd;
+}
+
+.social-button.google:hover {
+  background-color: #f7f7f7;
+}
+
+/* Microsoft */
+.social-button.microsoft {
+  background-color: #2F2F56;
+  color: #ffffff;
+  border-color: #2F2F56;
+}
+
+.social-button.microsoft:hover {
+  background-color: #1e1e3f;
+}
+
+/* Trenner “oder” */
+.separator {
+  text-align: center;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  height: 1px;
+  width: 40%;
+  background: #cccccc;
+  position: absolute;
+  top: 50%;
+}
+
+.separator::before {
+  left: 0;
+}
+
+.separator::after {
+  right: 0;
+}
+
+.separator span {
+  background: #ffffff;
+  padding: 0 0.75rem;
+  color: #666666;
+  font-size: 0.9rem;
+}
+
+/* Input‑Gruppen */
 .input-group {
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .input-group label {
   display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-  font-size: 15px;
-  color: #f5f5f5;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #444444;
 }
 
-.input-group input,
-.input-group select {
+.input-group input {
   width: 100%;
-  padding: 14px;
-  font-size: 14px;
-  border: 1px solid #444;
-  border-radius: 12px;
-  background-color: #1f1f1f;
-  color: #f5f5f5;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 0.75rem;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s;
 }
 
-.input-group input::placeholder {
-  color: #888;
-}
-
-.input-group input:focus,
-.input-group select:focus {
+.input-group input:focus {
   outline: none;
-  border-color: #1a73e8;
-  box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+  border-color: #667eea;
 }
 
-/* Submit-Button */
-button[type="submit"] {
+/* Submit‑Button */
+.submit-button {
   width: 100%;
-  padding: 16px;
-  font-size: 16px;
-  font-weight: bold;
+  padding: 0.75rem;
+  background-color: #667eea;
+  color: #ffffff;
   border: none;
-  border-radius: 14px;
-  background-color: #1a73e8;
-  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
-button[type="submit"]:hover {
-  background-color: #0f5ec2;
-}
-
-/* Fix Azure B2C display bug */
-#api {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
-
-
-/* ============================================= */
-/* OVERRIDES FÜR AZURE AD B2C UNIFIED UI         */
-/* ============================================= */
-
-/* Formular-Kachel im #api-Container */
-#api > div {
-  background-color: rgba(20,20,20,0.85) !important;
-  padding: 32px !important;
-  border-radius: 24px !important;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4) !important;
-  color: #f5f5f5 !important;
-  max-width: 420px;
-  margin: 0 auto;
-}
-
-/* Überschriften */
-#api h1,
-#api h2,
-#api .b2c-header {
-  color: #f5f5f5 !important;
-  font-family: 'Segoe UI', sans-serif !important;
-  text-align: center !important;
-  margin-bottom: 24px !important;
-}
-
-/* Labels und Instruktionen */
-#api label,
-#api .b2c-label,
-#api .b2c-instruction {
-  color: #f5f5f5 !important;
-  font-weight: bold !important;
-  font-size: 15px !important;
-}
-
-/* Eingabefelder (E‑Mail, Passwort, Datum etc.) */
-#api input[type="email"],
-#api input[type="password"],
-#api input[type="tel"],
-#api input[type="date"],
-#api select {
-  width: 100% !important;
-  padding: 14px !important;
-  font-size: 14px !important;
-  border: 1px solid #444 !important;
-  border-radius: 12px !important;
-  background-color: #1f1f1f !important;
-  color: #f5f5f5 !important;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-#api input::placeholder,
-#api ::-webkit-input-placeholder {
-  color: #888 !important;
-}
-
-#api input:focus,
-#api select:focus {
-  outline: none !important;
-  border-color: #1a73e8 !important;
-  box-shadow: 0 0 0 2px rgba(26,115,232,0.2) !important;
-}
-
-/* Haupt‑Submit-Button */
-#api button[type="submit"],
-#api .button {
-  width: 100% !important;
-  padding: 16px !important;
-  font-size: 16px !important;
-  font-weight: bold !important;
-  border: none !important;
-  border-radius: 14px !important;
-  background-color: #1a73e8 !important;
-  color: #fff !important;
-  cursor: pointer !important;
-  transition: background-color 0.3s ease !important;
-}
-
-#api button[type="submit"]:hover,
-#api .button:hover {
-  background-color: #0f5ec2 !important;
-}
-
-/* Social-Login-Buttons (Microsoft, Google) */
-#api .socialProviders button {
-  display: flex !important;
-  align-items: center !important;
-  width: 100% !important;
-  padding: 12px 14px !important;
-  margin-bottom: 12px !important;
-  font-size: 14px !important;
-  border: 1px solid #444 !important;
-  border-radius: 12px !important;
-  background-color: #1f1f1f !important;
-  color: #f5f5f5 !important;
-  cursor: pointer !important;
-}
-
-#api .socialProviders button:hover {
-  background-color: #0f5ec2 !important;
-  border-color: #0f5ec2 !important;
-}
-
-/* „OR“-Separator */
-#api .or-separator,
-#api .b2c-or {
-  text-align: center !important;
-  font-size: 20px !important;
-  font-weight: bold !important;
-  margin: 24px 0 !important;
-  color: #f5f5f5 !important;
-}
-
-/* Link‑Styling (Passwort‑vergessen, Sign-up) */
-#api a {
-  color: #1a73e8 !important;
-  text-decoration: none !important;
-}
-
-#api a:hover {
-  text-decoration: underline !important;
+.submit-button:hover {
+  background-color: #5a67d8;
 }
