@@ -2,9 +2,9 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Registrieren</title>
-<link rel="stylesheet" href="https://adelh0lzener.github.io/ms-register-page/style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div id="api">
@@ -12,29 +12,19 @@
       <div class="card">
         <h2>Registrieren</h2>
 
-        <form id="registerForm">
-          <div class="input-group">
-            <label for="email">E‑Mail*</label>
-            <input type="email" id="email" name="email" required />
-          </div>
+        <!-- Social Login Buttons werden von Azure hier injected -->
+        <div id="socialButtons" class="social-login"></div>
 
-          <div class="input-group">
-            <label for="password">Passwort*</label>
-            <input type="password" id="password" name="password" required />
-          </div>
+        <!-- Trenner -->
+        <div class="separator"><span>ODER</span></div>
 
-          <div class="input-group">
-            <label for="repeat-password">Passwort wiederholen*</label>
-            <input type="password" id="repeat-password" name="repeat-password" required />
-          </div>
+        <!-- Lokales Konto-Formular wird hier injected -->
+        <div id="localAccountForm">
+          <!-- Azure fügt dynamisch das Formular mit Feldern wie email, password, etc. ein -->
+        </div>
 
-          <div class="input-group">
-            <label for="birthdate">Geburtsdatum*</label>
-            <input type="date" id="birthdate" name="birthdate" required />
-          </div>
-
-          <button type="submit" class="btn submit">Registrieren</button>
-        </form>
+        <!-- Button wird ebenfalls von Azure eingefügt -->
+        <div id="continue" class="submit-container"></div>
       </div>
     </div>
   </div>
